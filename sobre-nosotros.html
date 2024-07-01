@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Yakuza</title>
+    <style>
+        /* Estilos generales */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            overflow-x: auto;
+            width: 100%;
+            min-width: 1024px;
+        }
+
+    /* Estilos para el video de fondo */
+    #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* Estilos para el menú de navegación */
+    nav {
+        background-color: rgba(0, 0, 0, 0.00);
+        padding: 20px 0;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        animation: fadeInDown 0.5s ease;
+    }
+
+    /* Estilos para el menú "Sobre Nosotros" */
+    #sobre-nosotros-link {
+        color: #ffffff; /* Letras blancas */
+        border-color: #ffffff; /* Mantener el color blanco para el borde de este enlace */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Agregar transición de transform y background-color */
+    }
+
+    /* Estilos para las opciones del menú */
+    nav a:not(#sobre-nosotros-link) {
+        color: #ffffff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+        border: 5px solid #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease; /* Agregar transición de transform y color */
+    }
+
+        nav a:not(#sobre-nosotros-link):hover {
+            background-color: #00BFFF;
+            border-color: #00BFFF;
+            transform: scale(1.1);
+        }
+
+    /* Estilos para la sección de contenido */
+    section {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 150px auto 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 1.2em;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.5s ease forwards;
+    }
+
+    /* Estilos para el enlace de Discord */
+    .discord-link {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #0000ff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 30px;
+        font-size: 1.5em;
+        transition: background-color 0.3s ease;
+    }
+
+        .discord-link:hover {
+            background-color: #0000cc;
+        }
+
+    /* Estilos para el pie de página */
+    footer {
+        background-color: transparent;
+        text-align: left;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        opacity: 0;
+        animation: fadeInUpFooter 0.5s ease forwards;
+    }
+
+    /* Estilos para el menú de contacto */
+    #contacto-menu {
+        display: none;
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        background-color: #0000ff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Definir animaciones */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUpFooter {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- Video de fondo -->
+   <video id="video-background" autoplay muted loop>
+        <source src="VIDEOS E IMAGENES/bastardygans.webm" type="video/webm">
+        Tu navegador no soporta el elemento de video.
+    </video>
+<!-- Contenido de la página -->
+<nav>
+    <div>
+        <a href="index.html">Inicio</a>
+        <a href="reglas.html">Reglas</a>
+        <a href="Tienda.html">TIENDA</a>
+        <a href="https://discord.gg/4m9Du4VMgr" target="_blank">Discord</a>
+    </div>
+    <a href="#" id="contacto-btn">Contacto</a>
+</nav>
+
+<section>
+    <h2 style="color: #2E86C1; font-family: 'Roboto', sans-serif;">Sobre Nosotros</h2>
+    <p>
+        BIENVENIDO A YAKUZA
+    </p>
+    <a class="discord-link" href="https://discord.gg/4m9Du4VMgr" target="_blank">Únete a nuestro Discord</a>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Yakuza. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<div id="contacto-menu">
+    <p><strong>Correo:</strong> NULO</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactoBtn = document.getElementById('contacto-btn');
+        const contactoMenu = document.getElementById('contacto-menu');
+
+        contactoBtn.addEventListener('click', function () {
+            if (contactoMenu.style.display === 'none' || contactoMenu.style.display === '') {
+                contactoMenu.style.display = 'block';
+            } else {
+                contactoMenu.style.display = 'none';
+            }
+        });
+
+        const navLinks = document.querySelectorAll('nav a:not(#sobre-nosotros-link)');
+        navLinks.forEach(link => {
+            link.style.animationDelay = '0.5s';
+            link.style.animationName = 'fadeIn';
+            link.style.opacity = '1';
+        });
+
+        const footer = document.querySelector('footer');
+        footer.style.animationDelay = '1s';
+        footer.style.opacity = '1';
+    });
+
+    // Guardar y restaurar la posición del video de fondo
+    const video = document.getElementById('video-background');
+
+    // Verificar si localStorage es compatible
+    if (window.localStorage) {
+        // Verificar si hay una posición guardada
+        const savedPosition = localStorage.getItem('videoPosition');
+        if (savedPosition) {
+            video.currentTime = parseFloat(savedPosition);
+        }
+
+        // Guardar la posición al salir de la página
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('videoPosition', video.currentTime.toString());
+        });
+    }
+</script>
+</body>
+</html>
