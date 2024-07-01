@@ -19,15 +19,16 @@
             position: relative;
         }
 
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
+        #background-image {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/Carlitosxz1/YAKUZA/main/VIDEOS%20E%20IMAGENES/Yakuza.jpg');
+            background-size: cover;
+            background-position: center;
         }
+
+
 
         nav {
             display: flex;
@@ -181,11 +182,8 @@
     </style>
 </head>
 <body>
-    <!-- Video de fondo -->
-    <video id="video-background" autoplay muted loop>
-        <source src="VIDEOS E IMAGENES/bastardygans.webm" type="video/webm">
-        Tu navegador no soporta el elemento de video.
-    </video>
+    <!-- Imagen de fondo -->
+    
 
     <nav>
         <a href="reglas.html">Reglas</a>
@@ -193,13 +191,13 @@
         <a href="Tienda.html">TIENDA</a>
         <a href="https://discord.gg/xhDpvFbwrR" target="_blank">Discord</a>
     </nav>
-    
+
     <header>
         <h1>YAKUZA RP</h1>
         <h2>Servidor de GTA Roleplay PVP</h2>
         <a href="https://discord.gg/xhDpvFbwrR" class="discord-button" target="_blank">Discord</a>
     </header>
-    
+
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 YAKUZA. Todos los derechos reservados.</p>
