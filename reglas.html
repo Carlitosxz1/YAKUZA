@@ -13,17 +13,18 @@
             padding: 0;
             font-family: Arial, sans-serif;
             color: #ffffff;
-            overflow-x: auto;
+            overflow-x: hidden;
             width: 100%;
             min-width: 1024px;
             position: relative;
         }
+
         #background-image {
-            background-image: url('VIDEOS E IMAGENES/Yakuzaa.jpg'); /* Cambia esta ruta por la ruta de tu imagen */
-            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-            background-position: center; /* Centra la imagen en el fondo */
+            background-image: url('VIDEOS E IMAGENES/Yakuzaa.jpg');
+            background-size: cover;
+            background-position: center;
             width: 100%;
-            height: 100vh; /* Ajusta la altura para que cubra toda la pantalla */
+            height: 100vh;
             position: absolute;
             top: 0;
             left: 0;
@@ -64,38 +65,49 @@
                     transform: scale(1.1);
                 }
 
-        section {
-            padding: 20px;
+        #sidebar {
             background-color: rgba(0, 0, 0, 0.8);
-            margin: 150px auto 20px;
-            border-radius: 10px;
-            max-width: 750px;
-            text-align: justify;
-            line-height: 1.6;
-            font-size: 1em;
-            animation: fadeInUp 1s ease;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .important-note {
-            background-color: #ff0000;
-            color: #ffffff;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            font-size: 1.5em;
-        }
-
-        .signature {
-            font-style: italic;
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        .scrollable {
-            max-height: 400px;
+            padding: 20px;
+            position: fixed;
+            width: 250px;
+            top: 80px;
+            /* Adjust the position below the primary nav */
+            left: 0;
+            bottom: 0;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
             overflow-y: auto;
+        }
+
+            #sidebar a {
+                color: #ffffff;
+                margin: 5px 0;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 1em;
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+                #sidebar a:hover {
+                    background-color: #00BFFF;
+                    border-color: #00BFFF;
+                }
+
+        #content {
+            margin-left: 270px;
+            /* Leave space for the sidebar */
+            padding: 20px;
+            padding-top: 120px;
+            /* Adjust padding to avoid overlapping with the navbar */
+            padding-left: 280px;
+            /* Adjust padding to avoid overlapping with the sidebar */
+        }
+
+        .content-section {
+            display: none;
         }
 
         footer {
@@ -123,18 +135,6 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 
@@ -149,114 +149,39 @@
         <a href="https://discord.gg/gHtTK4g32z" target="_blank">Discord</a>
         <a href="#" id="contacto-btn">Contacto</a>
     </nav>
-    <section>
-        <h2 style="text-align: center;">Reglas</h2>
-        <div class="important-note">
-            <p>IMPORTANTE: El uso de hacks o archivos externos está estrictamente prohibido. Cualquier persona que no cumpla las normativas será expulsada inmediatamente.</p>
+    <div id="sidebar">
+        <a href="#" data-section="normativa-yakuza">Normativa Yakuza</a>
+        <a href="#" data-section="conceptos-rol">Conceptos de rol</a>
+        <a href="#" data-section="normativa-general">Normativa General</a>
+        <a href="#" data-section="uso-comandos">Uso de comandos</a>
+        <a href="#" data-section="normativa-ped">Normativa de PED</a>
+        <a href="#" data-section="normativa-propiedades">Normativa de Propiedades</a>
+        <a href="#" data-section="normativa-locales">Normativa de Locales</a>
+        <a href="#" data-section="normativa-ck">Normativa de CK</a>
+        <a href="#" data-section="normativa-whitelist">Normativa de WhiteList</a>
+        <a href="#" data-section="donaciones">Donaciones</a>
+        <a href="#" data-section="nuevo-apartado">Nuevo Apartado</a>
+        <a href="#" data-section="normativa-delictual-loud">Normativa delictual Loud Roleplay</a>
+        <a href="#" data-section="normativa-general-delictual">Normativa general delictual</a>
+        <a href="#" data-section="actos-delictuales">Actos delictuales</a>
+        <a href="#" data-section="armamento">Armamento</a>
+        <a href="#" data-section="defcon-armamento-lspd">DEFCON y Armamento LSPD</a>
+        <a href="#" data-section="zonas-seguras">Zonas seguras</a>
+        <a href="#" data-section="zonas-rojas">Zonas rojas</a>
+    </div>
+    <div id="content">
+        <div id="normativa-yakuza" class="content-section">
+            <img src="VIDEOS E IMAGENES/LOGO.png" alt="Logo Normativa Yakuza" style="width: 100px; height: auto;">
+            <h2>Normativa Yakuza</h2>
+            <p>Contenido de Normativa Yakuza.</p>
         </div>
-        <div class="scrollable">
-            <ol>
-                <li style="text-align: center;">
-                    <strong>Respeto a los demás jugadores</strong>
-                    <div class="definition">
-                        <p>Los miembros de la banda deben tratar a otros jugadores con respeto, incluso en situaciones de conflicto. Evita el acoso, los insultos y el comportamiento tóxico.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Respeto a las reglas del servidor</strong>
-                    <div class="definition">
-                        <p>Cumple con todas las reglas establecidas por los administradores del servidor. Esto incluye restricciones de zona de combate, límites de armamento, y cualquier otra normativa específica del servidor.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Coordinación y comunicación.</strong>
-                    <div class="definition">
-                        <p>Los miembros de la banda deben comunicarse entre sí de manera efectiva y coordinar sus acciones durante las actividades de PvP. Esto incluye el uso de chat de voz o texto, así como tácticas de equipo durante los enfrentamientos.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>No abusar de glitches o exploits.</strong>
-                    <div class="definition">
-                        <p>Se prohíbe el uso de cualquier glitch, exploit o truco que pueda proporcionar una ventaja injusta en el juego. Esto incluye el uso de bugs para atravesar paredes, obtener dinero ilegalmente, o cualquier otra actividad similar.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Participación activa.</strong>
-                    <div class="definition">
-                        <p>Se espera que todos los miembros participen activamente en las actividades de la banda, ya sea en misiones, tareas de reclutamiento, defensa de territorios, entre otras. La inactividad prolongada puede resultar en sanciones o expulsión.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Uniformidad y símbolos de la banda.</strong>
-                    <div class="definition">
-                        <p>Se puede requerir que los miembros utilicen ciertos colores, prendas de vestir o emblemas que identifiquen su afiliación a la banda. Esto ayuda a fomentar la identidad de grupo y a mantener la cohesión visual.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Inventario de banda.</strong>
-                    <div class="definition">
-                        <p>Los recursos obtenidos por la banda, ya sea dinero, armas, etc. se tienen que guardar en el inventario personal de la banda, no sacar excesivamente armas del inventario y usarlas con responsabilidad.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-
-                    <strong>Respeto a las decisiones del liderazgo.</strong>
-                    <div class="definition">
-                        <p>Las decisiones tomadas por el liderazgo de la banda deben ser respetadas y seguidas por todos los miembros. Si hay desacuerdo, se puede discutir de manera interna de forma constructiva, pero siempre manteniendo el respeto hacia las autoridades.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Entrenamiento y mejora continua.</strong>
-                    <div class="definition">
-                        <p>Se puede fomentar el desarrollo de habilidades y capacidades entre los miembros mediante entrenamientos regulares y el intercambio de conocimientos. Esto ayuda a fortalecer la efectividad de la banda en diferentes situaciones.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Resolución pacífica de conflictos internos.</strong>
-                    <div class="definition">
-                        <p>Los desacuerdos entre miembros deben ser resueltos de manera pacífica y constructiva, preferiblemente a través del diálogo y la mediación. La violencia interna solo debilita a la banda y puede resultar en divisiones irreparables.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Respeto a las reglas del servidor y de la comunidad.</strong>
-                    <div class="definition">
-                        <p>Además de respetar las reglas específicas de la banda, los miembros deben cumplir con todas las reglas establecidas por los administradores del servidor y respetar a la comunidad de jugadores en general.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Solidaridad.</strong>
-                    <div class="definition">
-                        <p>Apoya a otros miembros de la banda en tiempos difíciles y colabora para alcanzar objetivos comunes.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Mantener el poder de la mafia.</strong>
-                    <div class="definition">
-                        <p>Adopta medidas para proteger y fortalecer la posición de la banda en el servidor.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Reconocimiento y recompensa.</strong>
-                    <div class="definition">
-                        <p>Se pueden establecer sistemas de reconocimiento y recompensa para aquellos miembros que demuestren un desempeño excepcional, ya sea en combate, en el roleplay o en el apoyo a los objetivos de la banda.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Integración de nuevos reclutas.</strong>
-                    <div class="definition">
-                        <p>Los nuevos reclutas deben ser integrados gradualmente a la banda, recibiendo orientación, entrenamiento y apoyo por parte de los miembros más experimentados. Se les debe ofrecer la oportunidad de demostrar su valía antes de obtener plenos derechos dentro de la organización.</p>
-                    </div>
-                </li>
-                <li style="text-align: center;">
-                    <strong>Participación en la economía del servidor.</strong>
-                    <div class="definition">
-                        <p>Los miembros deben contribuir activamente a la economía del servidor, ya sea a través de la compra y venta de bienes legales o ilegales, la prestación de servicios a otros jugadores, o cualquier otra actividad económica que beneficie a la banda.</p>
-                    </div>
-                </li>
-            </ol>
+        <div id="conceptos-rol" class="content-section">
+            <img src="VIDEOS E IMAGENES/LOGO.png" alt="Logo Conceptos de rol" style="width: 100px; height: auto;">
+            <h2>Conceptos de rol</h2>
+            <p>Contenido de Conceptos de rol.</p>
         </div>
-        <p class="signature">ATT: FUNDADOR YAKUZA</p>
-    </section>
+        <!-- Añade más secciones de contenido aquí -->
+    </div>
     <footer>
         <p class="footer-content">© 2024 YAKUZA. Todos los derechos reservados.</p>
     </footer>
@@ -269,7 +194,8 @@
         document.addEventListener('DOMContentLoaded', function () {
             const contactoBtn = document.getElementById('contacto-btn');
             const contactoMenu = document.getElementById('contacto-menu');
-            const video = document.getElementById('video-background');
+            const sidebarLinks = document.querySelectorAll('#sidebar a');
+            const contentSections = document.querySelectorAll('.content-section');
 
             contactoBtn.addEventListener('click', function () {
                 if (contactoMenu.style.display === 'none' || contactoMenu.style.display === '') {
@@ -279,16 +205,18 @@
                 }
             });
 
-            // Guardar la posición del video antes de salir de la página
-            window.addEventListener('beforeunload', function () {
-                localStorage.setItem('videoTime', video.currentTime);
-            });
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
 
-            // Recuperar la posición del video al cargar la página
-            const savedTime = localStorage.getItem('videoTime');
-            if (savedTime !== null) {
-                video.currentTime = savedTime;
-            }
+                    contentSections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    document.getElementById(targetSection).style.display = 'block';
+                });
+            });
         });
     </script>
 </body>
