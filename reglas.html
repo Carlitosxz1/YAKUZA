@@ -66,10 +66,10 @@
                 }
 
         #sidebar {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(180deg, #1a1a1a, #333);
             padding: 20px;
             position: fixed;
-            width: 250px;
+            width: 260px;
             top: 80px;
             /* Adjust the position below the primary nav */
             left: 0;
@@ -78,37 +78,56 @@
             display: flex;
             flex-direction: column;
             overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
         }
 
             #sidebar a {
                 color: #ffffff;
-                margin: 5px 0;
+                margin: 10px 0;
                 text-decoration: none;
-                padding: 10px;
-                border-radius: 5px;
+                padding: 15px;
+                border-radius: 8px;
                 font-size: 1em;
                 display: block;
                 transition: all 0.3s ease;
+                background: rgba(255, 255, 255, 0.1);
             }
 
                 #sidebar a:hover {
                     background-color: #00BFFF;
                     border-color: #00BFFF;
+                    transform: translateX(10px);
                 }
 
         #content {
-            margin-left: 270px;
-            /* Leave space for the sidebar */
+            margin-left: 400px;
+            /* Adjust to leave space for the sidebar */
             padding: 20px;
             padding-top: 120px;
             /* Adjust padding to avoid overlapping with the navbar */
-            padding-left: 280px;
-            /* Adjust padding to avoid overlapping with the sidebar */
+            position: relative;
         }
 
         .content-section {
             display: none;
+            position: relative;
+            margin-left: 50px;
+            /* Shift content to the left */
         }
+
+            .content-section::before {
+                content: "";
+                background-image: url('VIDEOS E IMAGENES/logo.png');
+                background-size: 100px 100px;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: -115px;
+                /* Position logo to the left */
+                top: -25px;
+                width: 100px;
+                height: 100px;
+                opacity: 1;
+            }
 
         footer {
             background-color: transparent;
@@ -171,12 +190,10 @@
     </div>
     <div id="content">
         <div id="normativa-yakuza" class="content-section">
-            <img src="VIDEOS E IMAGENES/LOGO.png" alt="Logo Normativa Yakuza" style="width: 100px; height: auto;">
             <h2>Normativa Yakuza</h2>
             <p>Contenido de Normativa Yakuza.</p>
         </div>
         <div id="conceptos-rol" class="content-section">
-            <img src="VIDEOS E IMAGENES/LOGO.png" alt="Logo Conceptos de rol" style="width: 100px; height: auto;">
             <h2>Conceptos de rol</h2>
             <p>Contenido de Conceptos de rol.</p>
         </div>
