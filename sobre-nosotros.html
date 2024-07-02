@@ -19,16 +19,17 @@
             min-width: 1024px;
         }
 
-    /* Estilos para el video de fondo */
-    #video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
+        #background-image {
+            background-image: url('VIDEOS E IMAGENES/Yakuza.jpg'); /* Cambia esta ruta por la ruta de tu imagen */
+            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen en el fondo */
+            width: 100%;
+            height: 100vh; /* Ajusta la altura para que cubra toda la pantalla */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
 
     /* Estilos para el menú de navegación */
     nav {
@@ -177,81 +178,80 @@
 </style>
 </head>
 <body>
-    <!-- Video de fondo -->
-   <video id="video-background" autoplay muted loop>
-        <source src="VIDEOS E IMAGENES/bastardygans.webm" type="video/webm">
-        Tu navegador no soporta el elemento de video.
-    </video>
-<!-- Contenido de la página -->
-<nav>
-    <div>
-        <a href="index.html">Inicio</a>
-        <a href="reglas.html">Reglas</a>
-        <a href="Tienda.html">TIENDA</a>
-        <a href="https://discord.gg/4m9Du4VMgr" target="_blank">Discord</a>
+    <!-- Imagen de fondo -->
+    <div id="background-image">
+        <!-- Contenido de tu sitio web -->
     </div>
-    <a href="#" id="contacto-btn">Contacto</a>
-</nav>
+    <!-- Contenido de la página -->
+    <nav>
+        <div>
+            <a href="index.html">Inicio</a>
+            <a href="reglas.html">Reglas</a>
+            <a href="Tienda.html">TIENDA</a>
+            <a href="https://discord.gg/4m9Du4VMgr" target="_blank">Discord</a>
+        </div>
+        <a href="#" id="contacto-btn">Contacto</a>
+    </nav>
 
-<section>
-    <h2 style="color: #2E86C1; font-family: 'Roboto', sans-serif;">Sobre Nosotros</h2>
-    <p>
-        BIENVENIDO A YAKUZA
-    </p>
-    <a class="discord-link" href="https://discord.gg/4m9Du4VMgr" target="_blank">Únete a nuestro Discord</a>
-</section>
+    <section>
+        <h2 style="color: #2E86C1; font-family: 'Roboto', sans-serif;">Sobre Nosotros</h2>
+        <p>
+            BIENVENIDO A YAKUZA
+        </p>
+        <a class="discord-link" href="https://discord.gg/4m9Du4VMgr" target="_blank">Únete a nuestro Discord</a>
+    </section>
 
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Yakuza. Todos los derechos reservados.</p>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Yakuza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="contacto-menu">
+        <p><strong>Correo:</strong> NULO</p>
     </div>
-</footer>
 
-<div id="contacto-menu">
-    <p><strong>Correo:</strong> NULO</p>
-</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactoBtn = document.getElementById('contacto-btn');
+            const contactoMenu = document.getElementById('contacto-menu');
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const contactoBtn = document.getElementById('contacto-btn');
-        const contactoMenu = document.getElementById('contacto-menu');
+            contactoBtn.addEventListener('click', function () {
+                if (contactoMenu.style.display === 'none' || contactoMenu.style.display === '') {
+                    contactoMenu.style.display = 'block';
+                } else {
+                    contactoMenu.style.display = 'none';
+                }
+            });
 
-        contactoBtn.addEventListener('click', function () {
-            if (contactoMenu.style.display === 'none' || contactoMenu.style.display === '') {
-                contactoMenu.style.display = 'block';
-            } else {
-                contactoMenu.style.display = 'none';
+            const navLinks = document.querySelectorAll('nav a:not(#sobre-nosotros-link)');
+            navLinks.forEach(link => {
+                link.style.animationDelay = '0.5s';
+                link.style.animationName = 'fadeIn';
+                link.style.opacity = '1';
+            });
+
+            const footer = document.querySelector('footer');
+            footer.style.animationDelay = '1s';
+            footer.style.opacity = '1';
+        });
+
+        // Guardar y restaurar la posición del video de fondo
+        const video = document.getElementById('video-background');
+
+        // Verificar si localStorage es compatible
+        if (window.localStorage) {
+            // Verificar si hay una posición guardada
+            const savedPosition = localStorage.getItem('videoPosition');
+            if (savedPosition) {
+                video.currentTime = parseFloat(savedPosition);
             }
-        });
 
-        const navLinks = document.querySelectorAll('nav a:not(#sobre-nosotros-link)');
-        navLinks.forEach(link => {
-            link.style.animationDelay = '0.5s';
-            link.style.animationName = 'fadeIn';
-            link.style.opacity = '1';
-        });
-
-        const footer = document.querySelector('footer');
-        footer.style.animationDelay = '1s';
-        footer.style.opacity = '1';
-    });
-
-    // Guardar y restaurar la posición del video de fondo
-    const video = document.getElementById('video-background');
-
-    // Verificar si localStorage es compatible
-    if (window.localStorage) {
-        // Verificar si hay una posición guardada
-        const savedPosition = localStorage.getItem('videoPosition');
-        if (savedPosition) {
-            video.currentTime = parseFloat(savedPosition);
+            // Guardar la posición al salir de la página
+            window.addEventListener('beforeunload', () => {
+                localStorage.setItem('videoPosition', video.currentTime.toString());
+            });
         }
-
-        // Guardar la posición al salir de la página
-        window.addEventListener('beforeunload', () => {
-            localStorage.setItem('videoPosition', video.currentTime.toString());
-        });
-    }
-</script>
+    </script>
 </body>
 </html>

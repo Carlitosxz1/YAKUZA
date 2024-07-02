@@ -20,13 +20,15 @@
             position: relative;
         }
 
-        #video-background {
-            position: fixed;
+        #background-image {
+            background-image: url('VIDEOS E IMAGENES/Yakuza.jpg'); /* Cambia esta ruta por la ruta de tu imagen */
+            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen en el fondo */
+            width: 100%;
+            height: 100vh; /* Ajusta la altura para que cubra toda la pantalla */
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
             z-index: -1;
         }
 
@@ -188,11 +190,10 @@
 </head>
 
 <body>
-    <!-- Video de fondo -->
-    <video id="video-background" autoplay muted loop>
-        <source src="VIDEOS E IMAGENES/bastardygans.webm" type="video/webm">
-        Tu navegador no soporta el elemento de video.
-    </video>
+    <<!-- Imagen de fondo -->
+    <div id="background-image">
+        <!-- Contenido de tu sitio web -->
+    </div>
 
     <nav>
         <a href="index.html">Inicio</a>
@@ -210,7 +211,7 @@
                 <p>Slot para unirse a la banda de los bastardygans.</p>
                 <p>Precio: $3000 CLP</p>
                 <button class="add-to-cart-button" data-name="SLOT BOOMGANG WARS" data-price="3000" data-image="https://raw.githubusercontent.com/Carlitosxz1/BASTARDYGANS/main/VIDEOS%20E%20IMAGENES/boom.png">Añadir al Carrito</button>
-                
+
             </div>
         </div>
         <div class="product">
@@ -220,7 +221,7 @@
                 <p>Slot para unirse a la banda de los bastardygans.</p>
                 <p>Precio: $2500 CLP</p>
                 <button class="add-to-cart-button" data-name="SLOT RADIANT PVP" data-price="2500" data-image="https://raw.githubusercontent.com/Carlitosxz1/BASTARDYGANS/main/VIDEOS%20E%20IMAGENES/radiant.png">Añadir al Carrito</button>
-               
+
             </div>
         </div>
     </section>
@@ -238,7 +239,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const contactoBtn = document.getElementById('contacto-btn');
             const contactoMenu = document.getElementById('contacto-menu');
-     
+
             contactoBtn.addEventListener('click', function () {
                 contactoMenu.style.display = contactoMenu.style.display === 'block' ? 'none' : 'block';
             });
