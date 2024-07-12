@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reglas - Yakuza</title>
     <style>
         html,
@@ -100,7 +100,7 @@
                 }
 
         #content {
-            margin-left: 400px;
+            margin-left: 280px;
             /* Adjust to leave space for the sidebar */
             padding: 20px;
             padding-top: 120px;
@@ -111,7 +111,7 @@
         .content-section {
             display: none;
             position: relative;
-            margin-left: 50px;
+            margin-bottom: 50px;
             /* Shift content to the left */
         }
 
@@ -154,6 +154,12 @@
                 transform: translateY(0);
             }
         }
+
+        /* Añadir estilos para secciones activas */
+        #sidebar a.active {
+            background-color: #00BFFF;
+            transform: translateX(10px);
+        }
     </style>
 </head>
 
@@ -169,7 +175,8 @@
         <a href="#" id="contacto-btn">Contacto</a>
     </nav>
     <div id="sidebar">
-        <a href="#" data-section="normativa-yakuza">Normativa Yakuza</a>
+        <!-- Normativa Yakuza ya no es un botón -->
+        <p>Normativa Yakuza</p>
         <a href="#" data-section="conceptos-rol">Conceptos de rol</a>
         <a href="#" data-section="normativa-general">Normativa General</a>
         <a href="#" data-section="uso-comandos">Uso de comandos</a>
@@ -191,167 +198,15 @@
     <div id="content">
         <div id="conceptos-rol" class="content-section">
             <h2>Conceptos de rol</h2>
-            <p>Valorar tu vida 
-Siempre deberás valorar la vida de tu personaje como la máxima prioridad, sin importar el rol que se este llevando acabo.
-
-
-/me (Comando) 
-Se utiliza para llevar a cabo acciones dentro del personaje cuando no contamos con las animaciones para realizarlas. Cabe mencionar que el /ME solo debe usarse para describir las acciones del personaje y nunca para los pensamientos de este.
-
-
-/do (Comando) 
-Se utiliza para rolear lo que sucede en el entorno, los sentimientos y pensamientos, los intentos para llevar a cabo acciones, además de descripciones de objetos y personajes. El /DO siempre deberá estar redactado en tercera persona. (Nunca se podrá mentir en el /DO)
-
-
-In Character (IC) 
-El IC son todos los eventos que ocurren dentro de la narrativa/historia de nuestro personaje (dentro del juego).
-
-
-Out Of Character (OOC) 
-El OOC son todas las acciones y conversaciones que tienen lugar fuera de la vida de nuestro personaje (fuera del juego).
-
-
-Rol de Interpretación (RDI)
-El RDI es la interpretación de nuestro personaje de manera IC. 
-El uso de emulador de exclusivo para PEDs. Al interpretar un personaje debemos saber darle una personalidad distinta con nuestra voz propia. 
-
-
-Rol de Entorno (RDE)
-Se define cómo no tomar en cuenta lo que está pasando a tu alrededor en un lugar o zona en específico. Ésto implica que no estás teniendo en cuenta el entorno que debe haber. En otras palabras, el rol de entorno abarca todo lo que no puedes ver fuera del juego (OOC), como personas caminando por la calle, autos circulando por la autopista, personal de seguridad en ciertos lugares, etc. 
-Se trata de cosas presentes que aunque no las veas, se deben interpretar en tu rol. Esto es esencial en el juego y todos debemos hacerlo.
-
-
-Power Gaming (PG)
-Este concepto se refleja al llevar a cabo acciones que resulten completamente imposibles en la vida real, sin importar las condiciones en las que nos encontremos.
-
-
-Power Gaming 2 (PG2)
-Se define como evadir o forzar un rol a beneficio personal.
-
-
-Meta Gaming (MG)
-Este concepto se define por adquirir información desde un medio Out of Channel (OOC) con el propósito de obtener ventaja y/o beneficio en el desarrollo de tu personaje de manera In Character (IC). 
-
-
-Meta Gaming 2 (MG2) 
-Se define cómo la confusión de canales IC a OOC. 
-
-
-Deathmatch (DM) 
-Se define como el asesinato de otro usuario sin ninguna razón valida o sin un rol previo. 
-Otro ejemplo de DM, es matar a un usuario por mera diversión/entretenimiento. 
-
-
-Vehicle Deathmatch (VDM) 
-Se refiere a la acción de utilizar un vehículo como arma, ya sea chocando o directamente causar la muerte de otro usuario, ya sea evadiendo un rol o por mera diversión.
-
-
-Player Kill (PK) "Muerte del jugador" 
-Es la norma que establece cómo se manejan los recuerdos y la muerte de tu personaje. Si tu personaje queda inconsciente o abatido, ya sea que reciba ayuda médica o no, se aplica un PK. Esto significa que tu personaje olvida los eventos o situaciones que lo derivaron a encontrarse en ese estado.
-
-
-Player Kill Total (PKT) "Muerte total del jugador"
-Se refiere a la muerte de tu personaje, resultando en la pérdida total de la memoria y de su historia desde su inicio en el servidor. Esto implica que el personaje olvida todos los eventos y experiencias vividas en el servidor, quedando solamente con los recuerdos previos a su entrada en el mismo.
-
-
-Character Kill (CK)
-Este concepto se refiere a la muerte de tu personaje, sin oportunidad de preservar su historia, lo que significa que no se podrá utilizar nuevamente. Con esto se deberá empezar con otro personaje con un nuevo RDI.
-
-Revenge Kill (RK)
-Se define como la acción de regresar al sitio donde has sido abatido anteriormente (PK) y continuar participando en el tiroteo, con fines de asesinar a quien previamente lo hizo contigo.
-
-
-Spawn Kill (SK)
-Se refiere a la situación en la que un usuario es abatido por otro al momento de ingresar al servidor o al salir de un lugar (Shell o IPL), donde resulta imposible moverse debido a las mecánicas del juego, y demora unos segundos. (Esto se produce porque esta cargando).
-
-
-Team Kill (TK) 
-Se define como matar a un miembro de tu misma facción/equipo, sin ningún rol de por medio y/o de manera intencionada. 
-
-
-Helicopter Kill (HK)
-Se define como abatir a un usuario utilizando las áspas del helicóptero como arma.
-
-
-Meta Kill (MK) 
-Se define como la acción de abatir a un usuario, debido a motivos o acciones acontecidas fuera de nuestro personaje (OOC).
-
-
-Bunny Jump (BJ) 
-Variante del Power Gaming. Es la acción de saltar repetidamente para no gastar tanta energía e ir mas rápido, el hacer esta acción conllevara a una sanción.
-
-
-Bug Abuse (BA)
-Se define como sacarle ventaja a un bug que brinde beneficios, como dinero extra, armas, etc.
-
-
-Bad Driving (BD)
-Se define como la conducción de manera temeraria y poco realista, chocando constantemente con objetos y obstáculos, no respetando el rol de entorno correspondiente.
-
-
-  Drive By (DB) 
-  Variante del Power Gaming. Se define como disparar a abatir desde un vehículo en movimiento. 
-
-
-Car Jacked (CJ) 
-Se define como el robo de un vehículo sin ningún rol previo. (Solo presionar la tecla correspondiente y robar el vehículo).
-
-
-Fear RolePlay (FRP) 
-El FRP es el miedo que debe experimentar nuestro personaje de manera IC en situaciones que lo ameriten. (Este concepto esta ligado directamente con la Valoración de Vida).
-
-
-FairPlay (FP) 
-El FP se interpreta como jugar de manera justa, manteniendo un equilibrio y evitando enfocarse exclusivamente en ganar ciertos tipos de roles.
-
-
-Mal Anuncio (MA) 
-Se define como la mal utilización del canal de anuncios de manera IC, con fines distintos a su RDI correspondiente. (Anuncio de locales, mecánicos, LSPD o EMS).
-
-
-Noob Abuse (NA)
-Se refiere a aprovecharse de un usuario sin experiencia en el servidor o en el roleplay, ya sea asaltándolo o manipulándolo para que realice acciones que solo beneficien a quienes abusan de él o ella. 
-
-
-Nulo Rol de Entorno (NRE)
-Se refiere a cuando no prestas atención o no consideras lo que está ocurriendo a tu alrededor en una zona o lugar en específico.
-
-
-Nulo Rol Heridas (NRH) 
-Una variante del Power Gaming, se define como "No Rolear Heridas". Si tu personaje resulta herido, algún motivo deberás interpretar correctamente, de acorde a lo sucedido.
-
-
-No Rol de Choque (NRC): Se define como "No Rolear Choque" y este concepto aplica para todo tipo de vehículo. Al impactar contra algún objeto/infraestructura deberás rolear el choque como tal.
-
-
-Sera OBLIGATORIO que TODO choque deba ser roleado con los /me y /do correspondientes. (En caso de no ser roleado con los /me y /do podrá ser motivo de WARN o SANCIÓN dependiendo del caso)
-
-ZigZag (ZZ) 
-Durante un tiroteo, si te disparan y reaccionas corriendo de un lado a otro para evitar los disparos (PG2), esto puede considerarse como un uso inapropiado e irrealista de las mecánicas del juego.
-
-
- Admin Abuse (AA)
-Se define como la utilización de comandos/acciones administrativas en beneficio propio o de otros usuarios.
-
-
- Abuse Animation (AA2) 
-Se define como el acto de abusar de una animación/comando con el propósito de obtener ventajas indebidas en una situación de rol. (Esta completamente prohibido enviar animaciones +18 sin consentimiento, el hacer esto conllevara una sanción PERMANENTE).
-
-
- Ghosting 
-Variante del Meta Gaming. Sucede cuando tu personaje queda abatido y revelas tu ubicación a través de un canal OOC.
-
-
- HeadQuarters (HQ) 
-Por su definición "Cuartel General". Es la base/casa de las organizaciones delictuales, este término se utiliza para indicar que es el centro de mando desde donde se coordinan las actividades, se toman decisiones y se llevan a cabo las principales operaciones de la banda/mafia/cartel. Puede ser un edificio, una base secreta o cualquier otro lugar designado como el "HQ" de la Organización Delictual. Esta Zona por RDE es Zona roja, por lo cual podrán abatirte sin entorno previo y sin aviso, agregando el poder cachearte abatido y sacar tu DNI.
-
-
- SpeedBoosting (SB) 
-Se define como utilizar caminatas o animaciones las cuales te permitan movilizarte mas ágilmente o correr mas rápido, utilizar estas caminatas u animaciones será motivo de SANCIÓN. 
-
-
- Combat Logging (CL)
-Desconectarse, desconectar el cable de red o provocar fallos/crasheos en el juego con el propósito de evadir una situación de rol, saliendo del juego intencionalmente. El realizar esta acción será motivo de SANCIÓN GRAVE.</p>
+            <p>Contenido largo para Conceptos de rol...</p>
+        </div>
+        <div id="normativa-general" class="content-section">
+            <h2>Normativa General</h2>
+            <p>Contenido largo para Normativa General...</p>
+        </div>
+        <div id="uso-comandos" class="content-section">
+            <h2>Uso de comandos</h2>
+            <p>Contenido largo para Uso de comandos...</p>
         </div>
         <!-- Añade más secciones de contenido aquí -->
     </div>
@@ -388,6 +243,29 @@ Desconectarse, desconectar el cable de red o provocar fallos/crasheos en el jueg
                     });
 
                     document.getElementById(targetSection).style.display = 'block';
+
+                    // Remove active class from all links
+                    sidebarLinks.forEach(link => link.classList.remove('active'));
+                    // Add active class to the clicked link
+                    this.classList.add('active');
+                });
+            });
+
+            window.addEventListener('scroll', function () {
+                let currentSection = '';
+
+                contentSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === currentSection) {
+                        link.classList.add('active');
+                    }
                 });
             });
         });
