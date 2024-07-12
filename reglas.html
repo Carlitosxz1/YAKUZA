@@ -17,7 +17,7 @@
             width: 100%;
             min-width: 1024px;
             position: relative;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #f0f0f0; /* Fondo claro para mejor visibilidad */
         }
 
         #background-image {
@@ -30,6 +30,7 @@
             top: 0;
             left: 0;
             z-index: -1;
+            opacity: 0.4; /* Más claridad para la imagen de fondo */
         }
 
         nav {
@@ -77,12 +78,12 @@
             display: flex;
             flex-direction: column;
             overflow-y: auto;
-            background: none;
-            box-shadow: none;
+            background: rgba(255, 255, 255, 0.8); /* Fondo claro y translúcido para la barra lateral */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         #sidebar a {
-            color: #ffffff;
+            color: #333; /* Color oscuro para mejor contraste */
             margin: 10px 0;
             text-decoration: none;
             padding: 15px;
@@ -90,12 +91,12 @@
             font-size: 1em;
             display: block;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9);
         }
 
         #sidebar a:hover {
             background-color: #00BFFF;
-            border-color: #00BFFF;
+            color: #fff; /* Texto blanco para mejor visibilidad al hacer hover */
             transform: translateX(10px);
         }
 
@@ -104,6 +105,9 @@
             padding: 20px;
             padding-top: 120px;
             position: relative;
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            color: #333; /* Texto oscuro para el contenido */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
         .content-section {
@@ -122,7 +126,7 @@
             top: -25px;
             width: 100px;
             height: 100px;
-            opacity: 1;
+            opacity: 0.7;
         }
 
         footer {
@@ -136,7 +140,7 @@
 
         .footer-content {
             margin-left: 20px;
-            color: #ffffff;
+            color: #333; /* Texto oscuro para el pie de página */
         }
 
         @keyframes fadeInDown {
@@ -153,6 +157,7 @@
 
         #sidebar a.active {
             background-color: #00BFFF;
+            color: #fff; /* Texto blanco cuando está activo */
             transform: translateX(10px);
         }
 
@@ -255,9 +260,6 @@
                     });
 
                     document.getElementById(targetSection).style.display = 'block';
-
-                    sidebarLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
                 });
             });
 
