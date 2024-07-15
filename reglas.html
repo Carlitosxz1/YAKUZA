@@ -47,24 +47,24 @@
             animation: fadeInDown 0.5s ease;
         }
 
-        nav a {
-            color: #ffffff;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid transparent;
-            padding: 10px 15px;
-            border-radius: 10px;
-            font-size: 1.2em;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
+            nav a {
+                color: #ffffff;
+                margin: 0 10px;
+                text-decoration: none;
+                font-weight: bold;
+                border: 2px solid transparent;
+                padding: 10px 15px;
+                border-radius: 10px;
+                font-size: 1.2em;
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
 
-        nav a:hover {
-            background-color: #ff0000;
-            border-color: #ff0000;
-            transform: scale(1.1);
-        }
+                nav a:hover {
+                    background-color: #ff0000;
+                    border-color: #ff0000;
+                    transform: scale(1.1);
+                }
 
         #sidebar {
             padding: 20px;
@@ -81,23 +81,23 @@
             box-shadow: none;
         }
 
-        #sidebar a {
-            color: #ffffff;
-            margin: 10px 0;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 1em;
-            display: block;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-        }
+            #sidebar a {
+                color: #ffffff;
+                margin: 10px 0;
+                text-decoration: none;
+                padding: 15px;
+                border-radius: 8px;
+                font-size: 1em;
+                display: block;
+                transition: all 0.3s ease;
+                background: rgba(255, 255, 255, 0.1);
+            }
 
-        #sidebar a:hover {
-            background-color: #ff0000;
-            border-color: #ff0000;
-            transform: translateX(10px);
-        }
+                #sidebar a:hover {
+                    background-color: #ff0000;
+                    border-color: #ff0000;
+                    transform: translateX(10px);
+                }
 
         #content {
             margin-left: 400px;
@@ -112,18 +112,18 @@
             margin-bottom: 50px;
         }
 
-        .content-section::before {
-            content: "";
-            background-image: url('VIDEOS E IMAGENES/LOGO.png');
-            background-size: 100px 100px;
-            background-repeat: no-repeat;
-            position: absolute;
-            left: -115px;
-            top: -25px;
-            width: 100px;
-            height: 100px;
-            opacity: 1;
-        }
+            .content-section::before {
+                content: "";
+                background-image: url('VIDEOS E IMAGENES/LOGO.png');
+                background-size: 100px 100px;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: -115px;
+                top: -25px;
+                width: 100px;
+                height: 100px;
+                opacity: 1;
+            }
 
         footer {
             background-color: transparent;
@@ -170,8 +170,39 @@
             border: 3px solid transparent;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #ff0000;
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #ff0000;
+            }
+
+        /* Estilos específicos para cada sección */
+        .content-section.normativa-general {
+            background-color: rgba(255, 0, 0, 0.1);
+            padding: 20px;
+            border-left: 5px solid red;
+        }
+
+        .content-section.conceptos-rol {
+            background-color: rgba(0, 0, 255, 0.1);
+            padding: 20px;
+            border-left: 5px solid blue;
+        }
+
+        .content-section.uso-comandos {
+            background-color: rgba(0, 255, 0, 0.1);
+            padding: 20px;
+            border-left: 5px solid green;
+        }
+
+        /* Estilo para centrar imágenes */
+        .content-section img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content-section p {
+            text-align: justify;
         }
     </style>
 </head>
@@ -207,22 +238,34 @@
         <a href="#" data-section="zonas-rojas">Zonas rojas</a>
     </div>
     <div id="content">
-        <div id="conceptos-rol" class="content-section">
-            <h2>Conceptos de rol</h2>
-            <p>Contenido largo para Conceptos de rol...</p>
-        </div>
-        <div id="normativa-general" class="content-section">
+        <div id="normativa-general" class="content-section normativa-general">
             <h2>Normativa General</h2>
             <p>Contenido largo para Normativa General...</p>
         </div>
-        <div id="uso-comandos" class="content-section">
+        <div id="conceptos-rol" class="content-section conceptos-rol">
+            <h2>Conceptos de rol</h2>
+            <p>
+                Valorar tu vida
+                Siempre deberás valorar la vida de tu personaje como la máxima prioridad, sin importar el rol que se esté llevando a cabo.
+
+                /me (Comando)
+                Se utiliza para llevar a cabo acciones dentro del personaje cuando no contamos con las animaciones para realizarlas. Cabe mencionar que el /ME solo debe usarse para describir las acciones del personaje y nunca para los pensamientos de este.
+
+                /do (Comando)
+                Se utiliza para rolear lo que sucede en el entorno, los sentimientos y pensamientos, los intentos para llevar a cabo acciones, además de descripciones de objetos y personajes. El /DO siempre deberá estar redactado en tercera persona. (Nunca se podrá mentir en el /DO)
+
+                In Character (IC)
+                El IC son todos los eventos que ocurren dentro de la narrativa/historia de nuestro personaje (dentro del juego).
+            </p>
+        </div>
+        <div id="uso-comandos" class="content-section uso-comandos">
             <h2>Uso de comandos</h2>
             <p>Contenido largo para Uso de comandos...</p>
         </div>
         <!-- Añade más secciones de contenido aquí -->
     </div>
     <footer>
-        <p class="footer-content">© 2024 YAKUZA. Todos los derechos reservados.</p>
+        <p class="footer-content">© 2024 YAKUZA. Todos los derechos reservados. Discord del Creador: jeremiiass.16</p>
     </footer>
 
     <div id="contacto-menu" style="display: none; position: fixed; top: 100px; right: 10px; background-color: #0000ff; padding: 10px; border-radius: 5px;">
@@ -282,4 +325,3 @@
 </body>
 
 </html>
-+
